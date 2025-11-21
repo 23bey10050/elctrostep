@@ -69,16 +69,17 @@ export default function DashboardPage() {
               <label className="text-xs font-medium text-gray-600">Area / Zone</label>
               <Select
                 value={selectedZone}
-                onChange={(e) => setSelectedZone(e.target.value)}
+                onChange={setSelectedZone}
                 className="w-48"
-              >
-                <option value="all">All Delhi</option>
-                <option value="north">North Delhi</option>
-                <option value="south">South Delhi</option>
-                <option value="east">East Delhi</option>
-                <option value="west">West Delhi</option>
-                <option value="central">Central Delhi</option>
-              </Select>
+                options={[
+                  { value: 'all', label: 'All Delhi' },
+                  { value: 'north', label: 'North Delhi' },
+                  { value: 'south', label: 'South Delhi' },
+                  { value: 'east', label: 'East Delhi' },
+                  { value: 'west', label: 'West Delhi' },
+                  { value: 'central', label: 'Central Delhi' },
+                ]}
+              />
             </div>
 
             <div className="flex flex-col gap-1.5">

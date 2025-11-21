@@ -159,8 +159,8 @@ export default function HistoricalPage() {
               <label className="text-xs font-medium text-gray-600">Historical Date</label>
               <DatePicker
                 value={selectedDate}
-                onChange={handleDateChange}
-                max={new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                 onChange={(e) => handleDateChange(e.target.value)}
+                 max={new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
               />
             </div>
 

@@ -10,7 +10,7 @@ export interface ScenarioRequest {
   is_weekend?: boolean
 }
 
-export interface ForecastPoint {
+export interface ScenarioForecastPoint {
   time: string
   forecast: number
   baseline: number
@@ -25,8 +25,8 @@ export interface Peak {
 }
 
 export interface ScenarioResponse {
-  baseline: ForecastPoint[]
-  scenario: ForecastPoint[]
+  baseline: ScenarioForecastPoint[]
+  scenario: ScenarioForecastPoint[]
   baseline_peaks: Peak[]
   scenario_peaks: Peak[]
   delta: {
